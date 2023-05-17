@@ -6,10 +6,11 @@ import Footer from './components/Footer'
 import Home from './routes/Home'
 import Signup from './routes/Signup'
 import Room from './routes/Room'
+import ErrorPage from './routes/ErrorPage'
 
 const Layout = ({ children }) => {
   return (
-    <div className='h-screen relative'>
+    <div className='min-h-screen w-screen flex flex-col justify-around'>
       <Header />
       <div>{children}</div>
       <Footer />
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Signup />
+      </Layout>
+    ),
+    errorElement: (
+      <Layout>
+        <ErrorPage />
       </Layout>
     )
   },

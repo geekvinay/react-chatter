@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
   return (
@@ -8,8 +9,25 @@ const Signup = () => {
           Experience the lag-less chatting experience here.
         </h1>
       </section>
-      <section className='rightSection border-4 border-gray-200 px-10 py-20'>
-        <form action=''></form>
+      <section className='rightSection h-full w-full border-4 border-gray-200 px-10 py-20 flex flex-col justify-between'>
+        <Link
+          to='/chat'
+          className='bg-gray-600 text-center py-4 text-2xl font-semibold text-white'
+        >
+          Start a new chat
+        </Link>
+        <Link
+          to='/room'
+          className='bg-gray-600 text-center py-4 text-2xl font-semibold text-white'
+        >
+          Join a room chat
+        </Link>
+        <Link
+          to='/private'
+          className='bg-gray-600 text-center py-4 text-2xl font-semibold text-white'
+        >
+          Start a private chat
+        </Link>
       </section>
     </div>
   )
