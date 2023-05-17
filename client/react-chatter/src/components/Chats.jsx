@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MessItem from '../components/MessItem'
 import io from 'socket.io-client'
 
-const socket = io('https://react-chatter.onrender.com/10000')
+const socket = io('http://localhost:4321')
 
 socket.on('connection', () => {
   console.log('Connected to server')
